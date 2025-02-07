@@ -14,6 +14,9 @@ from dicompylercore import dicomparser, dvh
 import matplotlib.path
 import plotly.express as px
 
+st.set_option('theme.base', 'light')
+st.set_option('theme.primaryColor', '#F63366')
+
 st.set_page_config(layout="wide",page_title = "Dose Gradient Curve Analyzer", page_icon="dgi_tab.ico",)
 theme = st.get_option("theme.base")
 
