@@ -471,7 +471,7 @@ def create_2d_isodose_plot(dose_data, ipp, pixel_spacing, grid_frame_offset_vect
         x=np.arange(slice_data.shape[1]) * pixel_spacing[1] + ipp[0],
         y=np.arange(slice_data.shape[0]) * pixel_spacing[0] + ipp[1],
         contours=dict(
-            start=min_dose_data,  # Use actual minimum from data
+            start=min_dose_data,
             end=max_dose,
             size=step_size,
             showlabels=True,
@@ -479,8 +479,10 @@ def create_2d_isodose_plot(dose_data, ipp, pixel_spacing, grid_frame_offset_vect
         ),
         colorscale='Viridis',
         colorbar=dict(
-            title='Dose (Gy)',
-            titlefont=dict(size=14, family="Arial Black"),
+            title=dict(
+                text='Dose (Gy)',
+                font=dict(size=14, family="Arial Black")
+            ),
             tickfont=dict(size=12, family="Arial Black")
         ),
         hoverongaps=False,
