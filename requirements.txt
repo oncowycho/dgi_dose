@@ -1,0 +1,8 @@
+dicompyler-core
+numpy
+pandas
+scikit-image
+scipy
+plotly
+loess
+pydicom==2.4.0
